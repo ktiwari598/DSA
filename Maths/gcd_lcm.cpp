@@ -8,6 +8,8 @@ using namespace std;
 
 /**
  * Euclidean subtraction
+ * T.C -> O(min(a,b))
+ * S.C -> O(min(a,b))
  */
 int gcd1(int a, int b) {
     if (a == b) return a;
@@ -18,13 +20,17 @@ int gcd1(int a, int b) {
 /**
  * Euclidean division is based on Euclidean subtraction, because at some point, one number becomes factor of other
  * Eg. at some point, a=42, b=14, then b will always be factor of a-b, then after some subtractions a == b.
+ * T.C -> O(log(a,b))
+ * S.C -> O(log(a,b))
  */
 int gcd2(int a, int b) {
     if (b == 0) return a;
     return gcd2(b, a % b);
 }
 
-
+/**
+ * a * b = lcm(a, b) * gcd(a, b)
+ */
 long long lcm(int a, int b) {
     return (1ll * a * b) / gcd2(a, b);
 }

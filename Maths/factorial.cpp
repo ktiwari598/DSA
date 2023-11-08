@@ -6,12 +6,24 @@
 using namespace std;
 
 /**
- * T.C -> O(n!)
- * S.C -> O(n)
+ * T.C -> O(n)
+ * S.C -> O(n) considering recursion stack space
  */
 int factorial_recursive(int n) {
     if (n == 1) return 1;
     return n * factorial_recursive(n - 1);
+}
+
+/**
+ * T.C -> O(n)
+ * S.C -> O(1)
+ */
+int factorial_iterative(int n) {
+    int ans = 1;
+    for (int i = 2; i <= n; i++) {
+        ans = ans * i;
+    }
+    return ans;
 }
 
 /**
