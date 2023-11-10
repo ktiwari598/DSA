@@ -12,4 +12,7 @@ add_executable(factors Maths/Factors.cpp)
 add_executable(coinchange DP/UnboundedKnapsack/CoinChange.cpp)
 add_executable(palindromenumbers Maths/PalindromeNumbers.cpp)
 add_executable(kadane DP/Kadane.cpp)
-add_executable(longestSubstringWithoutRepeatingChar SlidingWIndow/LongestSubstringWithoutRepeatingChar.cpp)
+add_executable(longestSubstringWithoutRepeatingChar SlidingWIndow/variableLength/LongestSubstringWithoutRepeatingChar.cpp
+        SlidingWIndow/variableLength/LongestSubarrayWithKDistinctChar.cpp)
+add_executable(longestSubarrayWithKDistinctChar SlidingWIndow/variableLength/LongestSubarrayWithKDistinctChar.cpp)
+add_executable(findAllAnagrams SlidingWIndow/fixedLength/FindAllAnagrams.cpp)
