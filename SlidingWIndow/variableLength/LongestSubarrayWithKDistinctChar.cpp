@@ -11,7 +11,7 @@ using namespace std;
  * TC : O(N)
  * SC : O(N)
  * Jab tak map ka size K se kam, tab tak bas insert karo and ans check karo, jaise hi map ka size K se jyada hoye
- * starting se map ka size karo
+ * starting se map ka size kam karo
  */
 int totalFruit(vector<int> &fruits) {
     int i = 0, j = 0, n = fruits.size(), ans = 0;
