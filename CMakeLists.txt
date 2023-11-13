@@ -16,3 +16,5 @@ add_executable(longestSubstringWithoutRepeatingChar SlidingWIndow/variableLength
         SlidingWIndow/variableLength/LongestSubarrayWithKDistinctChar.cpp)
 add_executable(longestSubarrayWithKDistinctChar SlidingWIndow/variableLength/LongestSubarrayWithKDistinctChar.cpp)
 add_executable(findAllAnagrams SlidingWIndow/fixedLength/FindAllAnagrams.cpp)
+add_executable(backtracking_dp DP/Misc/BackTracking_DP.cpp)
+add_executable(subarraysWithAtMostKDistinctIntegers SlidingWIndow/variableLength/SubarraysWithAtMostKDistinctIntegers.cpp)
