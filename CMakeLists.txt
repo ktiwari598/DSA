@@ -22,3 +22,4 @@ add_executable(maxConsecutiveOnes SlidingWIndow/variableLength/MaxConsecutiveOne
 add_executable(minimumWindowSubstring SlidingWIndow/variableLength/MinimumWindowSubstring.cpp)
 add_executable(sorting SearchingSorting/Sorting.cpp)
 add_executable(streamMedian Heap/StreamMedian.cpp)
+add_executable(balancedString SlidingWIndow/variableLength/BalancedString.cpp)
