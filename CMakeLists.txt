@@ -23,3 +23,4 @@ add_executable(minimumWindowSubstring SlidingWIndow/variableLength/MinimumWindow
 add_executable(sorting SearchingSorting/Sorting.cpp)
 add_executable(streamMedian Heap/StreamMedian.cpp)
 add_executable(balancedString SlidingWIndow/variableLength/BalancedString.cpp)
+add_executable(reduceXtoZero SlidingWIndow/variableLength/ReduceXtoZero.cpp)
