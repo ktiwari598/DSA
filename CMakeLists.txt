@@ -28,3 +28,6 @@ add_executable(subarrayProductLessThanK SlidingWIndow/variableLength/SubarrayPro
 add_executable(2sum Array/2Sum.cpp)
 add_executable(3Sum Array/3Sum.cpp)
 add_executable(kSum Array/kSum.cpp)
+add_executable(baseTemplate baseTemplate.cpp)
+add_executable(8thRangeSumBST LeetCodeDD/January24/8thRangeSumBST.cpp)
+add_executable(7thArithmeticSubsequencesII LeetCodeDD/January24/7thArithmeticSubsequencesII.cpp)
