@@ -46,3 +46,4 @@ add_executable(FirstNonRepeatingCharInAStream LinkedList/FirstNonRepeatingCharIn
 add_executable(FirstNonRepeatingCharInAStream2 Queue/FirstNonRepeatingCharInAStream.cpp)
 add_executable(19thMinFallingPathSum LeetCodeDD/January24/19thMinFallingPathSum.cpp)
 add_executable(MedianOfTwoSortedArrays SearchingSorting/BinarySearch/MedianOfTwoSortedArrays.cpp)
+add_executable(20thSumOfSubarrayMins LeetCodeDD/January24/20thSumOfSubarrayMins.cpp)
