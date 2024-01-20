@@ -45,3 +45,4 @@ add_executable(17thUniqueNumberofOccurrences LeetCodeDD/January24/17thUniqueNumb
 add_executable(FirstNonRepeatingCharInAStream LinkedList/FirstNonRepeatingCharInAStream.cpp)
 add_executable(FirstNonRepeatingCharInAStream2 Queue/FirstNonRepeatingCharInAStream.cpp)
 add_executable(19thMinFallingPathSum LeetCodeDD/January24/19thMinFallingPathSum.cpp)
+add_executable(MedianOfTwoSortedArrays SearchingSorting/BinarySearch/MedianOfTwoSortedArrays.cpp)
