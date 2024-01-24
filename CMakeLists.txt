@@ -55,3 +55,4 @@ add_executable(24thPseudoPalindromicPathsInBT LeetCodeDD/January24/24thPseudoPal
 add_executable(23rdMaxLengthOfConcatenatedStringWithUniqueCharacters LeetCodeDD/January24/23rdMaxLengthOfConcatenatedStringWithUniqueCharacters.cpp)
 add_executable(HeapSort SearchingSorting/Sorting/HeapSort.cpp)
 add_executable(PathWithMaxGold BackTracking/PathWithMaximumGold.cpp)
+add_executable(KthSmallestElementInaBST Tree/KthSmallestElementInaBST.cpp)
