@@ -19,12 +19,12 @@ public:
         unordered_set<char> st;
         string concat = temp + arr[cur];
         bool flag = true;
-        for (int i = 0; i < concat.length(); i++) {
-            if (st.count(concat[i]) > 0) {
+        for (char i: concat) {
+            if (st.count(i) > 0) {
                 flag = false;
                 break;
             }
-            st.insert(concat[i]);
+            st.insert(i);
         }
         if (flag) ans = max(ans, solve(cur + 1, arr, temp + arr[cur]));
         ans = max(ans, solve(cur + 1, arr, temp));
