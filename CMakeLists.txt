@@ -51,3 +51,5 @@ add_executable(20thSumOfSubarrayMins LeetCodeDD/January24/20thSumOfSubarrayMins.
 add_executable(21stHouseRobber LeetCodeDD/January24/21stHouseRobber.cpp)
 add_executable(22ndSetMismatch LeetCodeDD/January24/22ndSetMismatch.cpp)
 add_executable(FlattenBTtoLL Tree/FlattenBTtoLL.cpp)
+add_executable(24thPseudoPalindromicPathsInBT LeetCodeDD/January24/24thPseudoPalindromicPathsInBT.cpp)
+add_executable(23rdMaxLengthOfConcatenatedStringWithUniqueCharacters LeetCodeDD/January24/23rdMaxLengthOfConcatenatedStringWithUniqueCharacters.cpp)
