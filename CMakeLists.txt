@@ -56,3 +56,4 @@ add_executable(23rdMaxLengthOfConcatenatedStringWithUniqueCharacters LeetCodeDD/
 add_executable(HeapSort SearchingSorting/Sorting/HeapSort.cpp)
 add_executable(PathWithMaxGold BackTracking/PathWithMaximumGold.cpp)
 add_executable(KthSmallestElementInaBST Tree/KthSmallestElementInaBST.cpp)
+add_executable(25thLCS LeetCodeDD/January24/25thLCS.cpp)
