@@ -61,3 +61,4 @@ add_executable(26thOutOfBoundaryPath LeetCodeDD/January24/26thOutOfBoundaryPath.
 add_executable(29thImplementQueueUsingTwoStacks LeetCodeDD/January24/29thImplementQueueUsingTwoStacks.cpp)
 add_executable(PalindromeLinkedList LinkedList/PalindromeLinkedList.cpp)
 add_executable(StepsToReachDestination Maths/StepsToReachDestination.cpp)
+add_executable(30thReversePolishNotation LeetCodeDD/January24/30thReversePolishNotation.cpp)
