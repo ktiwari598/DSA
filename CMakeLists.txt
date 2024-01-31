@@ -62,3 +62,4 @@ add_executable(29thImplementQueueUsingTwoStacks LeetCodeDD/January24/29thImpleme
 add_executable(PalindromeLinkedList LinkedList/PalindromeLinkedList.cpp)
 add_executable(StepsToReachDestination Maths/StepsToReachDestination.cpp)
 add_executable(30thReversePolishNotation LeetCodeDD/January24/30thReversePolishNotation.cpp)
+add_executable(30thNextWarmerDay LeetCodeDD/January24/31stNextWarmerDay.cpp)
