@@ -65,3 +65,4 @@ add_executable(30thReversePolishNotation LeetCodeDD/January24/30thReversePolishN
 add_executable(30thNextWarmerDay LeetCodeDD/January24/31stNextWarmerDay.cpp)
 add_executable(LongestCommonSubstring DP/LongestCommonSubstring.cpp)
 add_executable(3rdPartitionArrayforMaximumSum LeetCodeDD/February24/3rdPartitionArrayforMaximumSum.cpp)
+add_executable(5thFirstUniqueCharacterInStream LeetCodeDD/February24/5thFirstUniqueCharacterInStream.cpp)
