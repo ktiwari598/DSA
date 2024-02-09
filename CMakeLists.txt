@@ -69,3 +69,4 @@ add_executable(5thFirstUniqueCharacterInStream LeetCodeDD/February24/5thFirstUni
 add_executable(7thSortCharactersByFrequency LeetCodeDD/February24/7thSortCharactersByFrequency.cpp)
 add_executable(TopKFrequentElements Heap/TopKFrequentElements.cpp)
 add_executable(8thPerfectSquares LeetCodeDD/February24/8thPerfectSquares.cpp)
+add_executable(LargestDivisibleSubset LeetCodeDD/February24/LargestDivisibleSubset.cpp)
