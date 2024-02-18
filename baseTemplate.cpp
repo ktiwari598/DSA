@@ -10,58 +10,85 @@ using namespace std;
 #define pii pair<int,int>
 
 
-bool compare(pii a, pii b) {
-    if (a.first == b.first) return a.second < b.second;
-    return a.first < b.first;
-}
-
-
-bool isPossible(int s, unordered_map<int, int> &mp, int maxi) {
-    if (maxi >= s) {
-        int teamSize = maxi > s ? mp.size() : mp.size() - 1;
-        return teamSize >= s;
+int solve(vector<string> arr1, vector<string> arr2, int x) {
+    int n1 = arr1.size(), n2 = arr2.size();
+    if (n1 == 0 || n2 == 0) return 0;
+    //cout << n1 << " " << n2 << " " << x << endl;
+    unordered_map<int, vector<string>> mp1, mp2;
+    for (int i = 0; i < n1; i++) {
+        string str = arr1[i];
+        //cout << str << " ";
+        if (x < str.length()) {
+            if (mp1.count(str[x] - '0') == 0) {
+                mp1[str[x] - '0'] = vector<string>();
+            }
+            mp1[str[x] - '0'].push_back(str);
+        }
     }
-    return false;
-}
-
-void solve(string &str, unordered_map<string, int> &mp, int i, int j, bool flag) {
-    //Base Case
-    if (j > str.length()) return;
-    if (j == str.length()) {
-        mp[to_string(str[i])] = true;
-        return;
+    //cout << endl;
+    bool flag = false;
+    for (int i = 0; i < n2; i++) {
+        string str = arr2[i];
+        //cout << str << " ";
+        if (x < str.length()) {
+            if (mp2.count(str[x] - '0') == 0) {
+                mp2[str[x] - '0'] = vector<string>();
+            }
+            if (mp1.count(str[x] - '0') > 0) flag = true;
+            mp2[str[x] - '0'].push_back(str);
+        }
     }
-    string st = flag ? str.substr(i) : str[i] + str.substr(j);
-    //cout << i << " " << j << " " << st << "\n";
-    if (mp.find(st) != mp.end()) {
-        return;
-    }
-    mp[st] = true;
-    //Recursive Intuition
+//    cout << endl;
+//    for (auto it: mp1) {
+//        cout << it.first << " : ";
+//        for (auto itr: it.second) {
+//            cout << itr << " ";
+//        }
+//        cout << endl;
+//    }
+//    for (auto it: mp2) {
+//        cout << it.first << " : ";
+//        for (auto itr: it.second) {
+//            cout << itr << " ";
+//        }
+//        cout << endl;
+//    }
+//    cout << flag << endl << endl;
+    int ans = 0;
     if (flag) {
-        solve(str, mp, j, j + 1, true);
-        solve(str, mp, i, j + 1, false);
-    } else {
-        solve(str, mp, i, j + 1, false);
+        for (int i = 0; i < 10; i++) {
+            ans = max(ans, 1 + solve(mp1[i], mp2[i], x + 1));
+        }
     }
+    return ans;
+}
+
+
+int longestCommonPrefix(vector<int> &arr1, vector<int> &arr2) {
+    int n1 = arr1.size(), n2 = arr2.size();
+    vector<string> temp1, temp2;
+    for (int i = 0; i < n1; i++) {
+        temp1.push_back(to_string(arr1[i]));
+    }
+    for (int i = 0; i < n2; i++) {
+        temp2.push_back(to_string(arr2[i]));
+    }
+    return solve(temp1, temp2, 0);
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    int t;
-    cin >> t;
-    while (t--) {
-        int n;
-        cin >> n;
-        string str;
-        cin >> str;
-        if (str.length() <= 1) cout << 1 << endl;
-        else {
-            unordered_map<string, int> mp;
-            //mp[str] = true;
-            solve(str, mp, 0, 1, true);
-            cout << mp.size() << "\n";
-        }
-    }
+    vector<int> vect1 = {1, 10, 100};
+    vector<int> vect2 = {1000};
+    vector<int> vect3 = {1, 2, 3};
+    vector<int> vect4 = {4, 4, 4};
+    vector<int> vect5 = {10, 23, 566};
+    vector<int> vect6 = {12, 234, 5664};
+    cout << longestCommonPrefix(vect1, vect2) << endl;
+    cout << longestCommonPrefix(vect3, vect4) << endl;
+    cout << longestCommonPrefix(vect5, vect6) << endl;
+
 }
+
+
