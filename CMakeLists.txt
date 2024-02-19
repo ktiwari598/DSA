@@ -32,7 +32,9 @@ add_executable(baseTemplate baseTemplate.cpp)
 add_executable(8thRangeSumBST LeetCodeDD/January24/8thRangeSumBST.cpp)
 add_executable(7thArithmeticSubsequencesII LeetCodeDD/January24/7thArithmeticSubsequencesII.cpp)
 add_executable(10thBurningTree LeetCodeDD/January24/10thBurningTree.cpp
-        LeetCodeDD/January24/21stHouseRobber.cpp)
+        LeetCodeDD/January24/21stHouseRobber.cpp
+        Tree/Traversal/TopView.cpp
+        Tree/Traversal/BoundaryTraversal.cpp)
 add_executable(11thMaximumDifferenceBetweenNodeandAncestor LeetCodeDD/January24/11thMaximumDifferenceBetweenNodeandAncestor.cpp)
 add_executable(1stAssignCookies LeetCodeDD/January24/1stAssignCookies.cpp)
 add_executable(13thMinStepsToMakeAnagram LeetCodeDD/January24/13thMinStepsToMakeAnagram.cpp)
