@@ -36,7 +36,8 @@ add_executable(10thBurningTree LeetCodeDD/January24/10thBurningTree.cpp
         Tree/Traversal/TopView.cpp
         Tree/Traversal/BoundaryTraversal.cpp
         Tree/Traversal/BottomView.cpp
-        Tree/Traversal/LeftView.cpp)
+        Tree/Traversal/LeftView.cpp
+        Tree/Traversal/Inorder.cpp)
 add_executable(11thMaximumDifferenceBetweenNodeandAncestor LeetCodeDD/January24/11thMaximumDifferenceBetweenNodeandAncestor.cpp)
 add_executable(1stAssignCookies LeetCodeDD/January24/1stAssignCookies.cpp)
 add_executable(13thMinStepsToMakeAnagram LeetCodeDD/January24/13thMinStepsToMakeAnagram.cpp)
@@ -82,3 +83,5 @@ add_executable(12thMajorityElement LeetCodeDD/February24/12thMajorityElement.cpp
 add_executable(17thFurthestBuildingYouCanReach LeetCodeDD/February24/17thFurthestBuildingYouCanReach.cpp)
 add_executable(18thMeetingRoomsIII LeetCodeDD/February24/18thMeetingRoomsIII.cpp)
 add_executable(RightView Tree/Traversal/RightView.cpp)
+add_executable(PostOrder Tree/Traversal/PostOrder.cpp)
+add_executable(PreOrder Tree/Traversal/PreOrder.cpp)
