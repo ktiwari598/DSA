@@ -85,3 +85,5 @@ add_executable(18thMeetingRoomsIII LeetCodeDD/February24/18thMeetingRoomsIII.cpp
 add_executable(RightView Tree/Traversal/RightView.cpp)
 add_executable(PostOrder Tree/Traversal/PostOrder.cpp)
 add_executable(PreOrder Tree/Traversal/PreOrder.cpp)
+add_executable(DiagonalTraversal Matrix/DiagonalTraversal.cpp)
+add_executable(25thGCDTraversal LeetCodeDD/February24/25thGCDTraversal.cpp)
