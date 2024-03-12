@@ -28,7 +28,7 @@ int maxSubArray(vector<int> &nums) {
 /**
  * TC : O(N)
  * SC : O(1)
- * 3 variables required for getting the max sum subaaray range
+ * 3 variables required for getting the max sum subarray range
  */
 vector<int> maxSubArray_range(vector<int> &nums) {
     int temp_max = 0, global_max = INT_MIN, x = -1, y = -1, k = 0;
