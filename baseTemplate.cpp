@@ -5,90 +5,78 @@
 
 using namespace std;
 
+#include <ext/pb_ds/tree_policy.hpp>
+
 #define loopI(i, start, end) for(int i=start;i<=end;i++)
 #define loopD(i, start, end) for(int i=start;i>=end;i--)
 #define pii pair<int,int>
+#define ordered_set tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update>
 
+int median(vector<int> arr, int start) {
+    int n = arr.size() - start;
+    if (n & 1) {
+        return arr[start + n / 2];
+    }
+    return ceil((arr[start + n / 2 - 1] + arr[start + n / 2]) / 2.0);
+}
 
-int solve(vector<string> arr1, vector<string> arr2, int x) {
-    int n1 = arr1.size(), n2 = arr2.size();
-    if (n1 == 0 || n2 == 0) return 0;
-    //cout << n1 << " " << n2 << " " << x << endl;
-    unordered_map<int, vector<string>> mp1, mp2;
-    for (int i = 0; i < n1; i++) {
-        string str = arr1[i];
-        //cout << str << " ";
-        if (x < str.length()) {
-            if (mp1.count(str[x] - '0') == 0) {
-                mp1[str[x] - '0'] = vector<string>();
-            }
-            mp1[str[x] - '0'].push_back(str);
-        }
-    }
-    //cout << endl;
-    bool flag = false;
-    for (int i = 0; i < n2; i++) {
-        string str = arr2[i];
-        //cout << str << " ";
-        if (x < str.length()) {
-            if (mp2.count(str[x] - '0') == 0) {
-                mp2[str[x] - '0'] = vector<string>();
-            }
-            if (mp1.count(str[x] - '0') > 0) flag = true;
-            mp2[str[x] - '0'].push_back(str);
-        }
-    }
+int solve(vector<int> arr, int start, int k) {
+
+    cout << start << " ";
+    for (int i = 0; i < arr.size(); i++) cout << arr[i] << " ";
+    cout << endl;
+
+    if (start >= arr.size()) return 0;
+
+    if (arr[arr.size() - 1] - arr[start] <= k) return 0;
+
+    //cout << start << endl;
+    vector<int> arr1 = arr;
+    int n = arr1.size();
+    int med = median(arr, start);
+    //cout << med << endl;
+    int temp = arr1[n - 1];
+    if (arr1[n - 1] == med) return 0;
+
+    arr1[n - 1] = med;
+    sort(arr1.begin(), arr1.end());
+
+//    for (int i = 0; i < arr1.size(); i++) cout << arr1[i] << " ";
 //    cout << endl;
-//    for (auto it: mp1) {
-//        cout << it.first << " : ";
-//        for (auto itr: it.second) {
-//            cout << itr << " ";
-//        }
-//        cout << endl;
-//    }
-//    for (auto it: mp2) {
-//        cout << it.first << " : ";
-//        for (auto itr: it.second) {
-//            cout << itr << " ";
-//        }
-//        cout << endl;
-//    }
-//    cout << flag << endl << endl;
-    int ans = 0;
-    if (flag) {
-        for (int i = 0; i < 10; i++) {
-            ans = max(ans, 1 + solve(mp1[i], mp2[i], x + 1));
-        }
-    }
-    return ans;
+
+    int first = temp - med + solve(arr1, start, k);
+    int second = arr[start] + solve(arr, start + 1, k);
+    //cout << first << " " << second << endl;
+    return min(first, second);
 }
 
 
-int longestCommonPrefix(vector<int> &arr1, vector<int> &arr2) {
-    int n1 = arr1.size(), n2 = arr2.size();
-    vector<string> temp1, temp2;
-    for (int i = 0; i < n1; i++) {
-        temp1.push_back(to_string(arr1[i]));
+int minimumDeletions(string word, int k) {
+    vector<int> freq(26, 0);
+    for (char ch: word) {
+        freq[ch - 'a']++;
     }
-    for (int i = 0; i < n2; i++) {
-        temp2.push_back(to_string(arr2[i]));
+
+    sort(freq.begin(), freq.end());
+    vector<int> res;
+    for (int i = 0; i <= 25; i++) {
+        if (freq[i] > 0) {
+            res.push_back(freq[i]);
+        }
     }
-    return solve(temp1, temp2, 0);
+//    for (int i: res) cout << i << " ";
+//    cout << endl;
+    return solve(res, 0, k);
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    vector<int> vect1 = {1, 10, 100};
-    vector<int> vect2 = {1000};
-    vector<int> vect3 = {1, 2, 3};
-    vector<int> vect4 = {4, 4, 4};
-    vector<int> vect5 = {10, 23, 566};
-    vector<int> vect6 = {12, 234, 5664};
-    cout << longestCommonPrefix(vect1, vect2) << endl;
-    cout << longestCommonPrefix(vect3, vect4) << endl;
-    cout << longestCommonPrefix(vect5, vect6) << endl;
-
+    //vector<int> vect = {};
+    string str1 = "dabdcbdcdcd";
+    string str2 = "aabcaba";
+    //cout << minimumDeletions(str1, 2) << endl;
+    cout << minimumDeletions(str2, 0) << endl;
 }
 
 
