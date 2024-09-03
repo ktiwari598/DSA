@@ -94,3 +94,4 @@ add_executable(13thFindThePivotInteger LeetCodeDD/March24/13thFindThePivotIntege
 add_executable(13thFindthePivotInteger LeetCodeDD/March24/13thFindthePivotInteger.cpp)
 add_executable(HeapInsertion Heap/HeapInsertion.cpp)
 add_executable(6thHandOfStraights LeetCodeDD/June24/6thHandOfStraights.cpp)
+add_executable(3rdSept LeetCodeDD/Sept24/3rd.cpp)
