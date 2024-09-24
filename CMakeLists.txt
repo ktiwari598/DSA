@@ -99,3 +99,4 @@ add_executable(3rdSept LeetCodeDD/Sept24/3rd.cpp
         LeetCodeDD/Sept24/7thSept.cpp
         LeetCodeDD/Sept24/6thSept.cpp
         LeetCodeDD/Sept24/5thSept.cpp)
+add_executable(24thSept LeetCodeDD/Sept24/24thSept.cpp)
